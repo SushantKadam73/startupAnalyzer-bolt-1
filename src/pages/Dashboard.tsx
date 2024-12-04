@@ -3,27 +3,14 @@ import { Plus } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import ProjectCard from '../components/ProjectCard';
 import NewProjectDialog from '../components/NewProjectDialog';
+import { getProjects } from '../data/projects';
 import { Project } from '../types';
 
 function Dashboard() {
   const [isNewProjectDialogOpen, setIsNewProjectDialogOpen] = useState(false);
   const setCurrentProject = useStore((state) => state.setCurrentProject);
   
-  // Mock projects data - would come from Supabase in production
-  const [projects] = useState<Project[]>([
-    {
-      id: '1',
-      name: 'E-commerce Platform',
-      created_at: '2024-03-10T10:00:00Z',
-      collaborators: ['john@example.com', 'jane@example.com'],
-    },
-    {
-      id: '2',
-      name: 'Mobile App MVP',
-      created_at: '2024-03-08T15:30:00Z',
-      collaborators: ['john@example.com'],
-    },
-  ]);
+  const projects = getProjects();
 
   const handleCreateProject = (name: string, collaborators: string[]) => {
     // TODO: Implement with Supabase

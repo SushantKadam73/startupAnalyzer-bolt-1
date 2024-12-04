@@ -68,13 +68,14 @@ function Sidebar() {
               }`}
             >
               <FolderOpen size={20} />
-              <span>Projects</span>
+              <span>Your Projects</span>
             </button>
           </nav>
         </div>
 
-        {/* Middle Section - Modules */}
+        {/* Middle Section - Stages */}
         <div className="flex-1 mt-8">
+          <h3 className="text-lg font-heading font-semibold text-light-text dark:text-dark-text mb-4">Stages</h3>
           <div className="space-y-2">
             {modules.map((module) => (
               <button
