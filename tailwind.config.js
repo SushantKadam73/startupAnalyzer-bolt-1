@@ -23,6 +23,9 @@ export default {
         heading: ['Space Grotesk', 'sans-serif'],
         body: ['Museo Sans', 'sans-serif'],
       },
+      fontSize: {
+        base: '0.875rem', // Adjusted base font size
+      },
     },
   },
   plugins: [],

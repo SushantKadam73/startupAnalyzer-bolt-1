@@ -46,26 +46,22 @@ function Sidebar() {
               buildersCompass
             </span>
           </div>
-          
-          <div className="text-base font-medium text-light-text dark:text-dark-text px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-            {currentProject?.name || 'Select a Project'}
-          </div>
 
           <nav className="space-y-2">
             <button
-              onClick={() => navigate('/')}
+              onClick={() => navigate('/dashboard')}
               className={`w-full flex items-center space-x-2 px-4 py-2 rounded-lg ${
-                location.pathname === '/' ? 'bg-light-primary/10 text-light-primary' : 'text-light-text dark:text-dark-text'
+                location.pathname === '/dashboard' ? 'bg-light-primary/10 text-light-primary' : 'text-light-text dark:text-dark-text'
               }`}
             >
               <Home size={20} />
               <span>Dashboard</span>
             </button>
             <button
-              onClick={() => navigate('/projects')}
+              onClick={() => navigate('/your-projects')}
               className={`w-full flex items-center space-x-2 px-4 py-2 rounded-lg ${
-                location.pathname === '/projects' ? 'bg-light-primary/10 text-light-primary' : 'text-light-text dark:text-dark-text'
-              }`}
+                location.pathname === '/your-projects' ? 'bg-light-primary/10 text-light-primary' : 'text-light-text dark:text-dark-text'
+              }`} 
             >
               <FolderOpen size={20} />
               <span>Your Projects</span>
